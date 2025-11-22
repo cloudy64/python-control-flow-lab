@@ -40,7 +40,10 @@ print_greeting()
 # - Ensure to provide feedback for non-alphabetical or invalid entries.
 
 def check_letter():
-   user_input = input("Enter a letter (a-z or A-Z): ") 
+   user_input = input("Enter a letter (a-z or A-Z): ")
+   if not user_input.isalpha() or len(user_input) != 1:
+        print("Invalid input. Please enter a single letter.")
+        return
    letter = user_input.lower()
    vowels = "aeiou"
 
